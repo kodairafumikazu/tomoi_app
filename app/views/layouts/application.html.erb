@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TomoriApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    
+    <header>
+      <div class="heading">
+        <h1 class="title">
+        <%= link_to "トモリ珈琲 online shop", items_path %>
+      </div>
+      <div class="navbar">
+        <ul class="nav-lists">
+          <%= link_to "店舗ガイド", store_guides_path, class: :nav__lists %>
+          <%= link_to "ショッピング", shoppings_path, class: :nav__lists %>
+          <%= link_to "アクセス", accesses_path, class: :nav__lists %>
+          <%= link_to "フランチャイズ募集", item_path(:id), class: :nav__lists %>
+          <% if user_signed_in? %>
+            <div class="nav-lists2">
+            <%# ユーザー %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__lists %>
+          <% elsif owner_signed_in? %>
+            <%# 管理者 %>
+            <%= link_to "ログアウト", destroy_owner_session_path, method: :delete, class: :nav__lists %>
+            </div>
+          <% else %>
+            <div class="nav-lists2">
+            <%# ゲストユーザー %>
+            <%= link_to "ログイン", new_user_session_path, class: :nav__lists %>
+            </div>
+            <div class="nav-lists2">
+            <%= link_to "新規登録", new_user_registration_path, class: :nav__lists %>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <p>Copyright(C) トモリ 珈琲 ALL RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+</html>
