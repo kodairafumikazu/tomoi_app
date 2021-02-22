@@ -1,0 +1,38 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+  </header>
+  <div class="items-sell-main">
+    <%= form_with model: @shopping, url: shoppings_path, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="img-upload">
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image %>
+      </div>
+    </div>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        商品名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :product_name, placeholder:"例)紅茶" %>
+    </div>
+    <div class="sell-price">
+      <div class="price-content">
+        <div class="price-text">
+          <span>価格</span>
+          <span class="indispensable">必須</span>
+        </div>
+        <span class="sell-yen">¥</span>
+        <%= f.text_field :price, placeholder:"例）300" %>
+      </div>
+    </div>
+    <div class="sell-btn-contents">
+      <%= f.submit "出品する", class:"sell-btn" %>
+      <%= link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+</div>

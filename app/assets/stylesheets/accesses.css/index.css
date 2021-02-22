@@ -1,0 +1,74 @@
+.comments {
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+	padding: 10px;
+}
+
+.comments h2 {
+	clear: both;
+	margin-bottom: 20px;
+	color: #fff;
+	padding: 10px 20px;
+	background: #546247;
+	border-radius: 10px;
+}
+
+.comments h3 {
+	clear: both;
+	margin-bottom: 20px;
+	padding: 8px 20px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+
+.comments p {
+	padding: 0px 20px 20px;
+}
+
+.comments p + p {
+	margin-top: -5px;
+}
+.comments h2 + p,
+.comments h3 + p {
+	margin-top: -10px;
+}
+.comments section + section {
+	margin-top: 30px;
+}
+
+.ta1 caption {
+	border: 1px solid #999;
+	border-bottom: none;
+	text-align: left;
+	background: #eee;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.ta1 th.tamidashi {
+	width: auto;
+	text-align: left;
+	background: #eee;
+}
+
+.ta1 {
+	table-layout: fixed;
+	width: 90%;
+	margin: 0 auto 150px;
+}
+
+.ta1, .ta1 td, .ta1 th {
+	word-break: break-all;
+	border: 1px solid #999;
+	padding: 12px;
+}
+
+.ta1 th {
+	text-align: center;
+	width: 20%;
+}
+
+
+.second-image {
+	padding: 10px;
+}

@@ -59,10 +59,20 @@
 
 ### Association
 
-- has_one     :order
 - has_many    :order_items
 
 
+
+## order_items テーブル
+
+| Column                      | Type       | Options                        |
+| --------------------------  | ---------- | ------------------------------ |
+| quantity                    | integer    | null: false                    |
+| order                       | references | null: false, foreign_key: true |
+| product                     | references | null: false, foreign_key: true |
+
+- belongs to :order
+- belongs to :product
 
 
 
@@ -78,22 +88,10 @@
 ### Association
 
 - belongs to :user
-- belongs to :product
 - has_one    :address
 - has_many   :order_items
 
 
-
-## order_items テーブル
-
-| Column                      | Type       | Options                        |
-| --------------------------  | ---------- | ------------------------------ |
-| quantity                    | integer    | null: false                    |
-| order                       | references | null: false, foreign_key: true |
-| user                        | references | null: false, foreign_key: true |
-
-- belongs to :order
-- belongs to :product
 
 
 

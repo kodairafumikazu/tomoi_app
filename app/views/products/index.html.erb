@@ -1,0 +1,51 @@
+<div class="main-wrap">
+  <main class="main">
+    <%# 商品一覧 %>
+    <% @shoppings.each do |shopping| %>
+      <article class="article-card">
+        <%= link_to shopping.product_name, shopping_path(shopping), class: "article-link" %>
+        <div class='article-head'>  
+          <%= image_tag shopping.image, class: "article-img" %>
+        </div>  
+        <div class="article-foot">
+          <div class="article-title">
+            <span><%= "#{shopping.price}円" %></span>
+          </div>
+        </div>
+      </article>
+    <% end %>
+
+    <% unless @shoppings.present? %>
+      <article class="article-card">
+        <a href="" class="article-link"><div>ダミー商品</div>
+          <div class="article-head">
+            <%= image_tag "4404299.jpg", class: "article-img" %>
+          </div>
+          <div class="article-foot">
+            <div class="article-title">
+              カフェモカ　420円
+            </div>
+          </div>
+        </a>
+      </article>
+    <% end %>
+  </main>
+
+  
+
+  <% if user_signed_in? %>
+    <%= link_to root_path, class: 'order-btn' do %>
+      <span class='order-title'>商品を購入</span>
+      <%= image_tag "210746.jpg", class: "order-btn-icon" %>
+    <% end %>
+  <% else owner_signed_in? %>
+    <%= link_to new_shopping_path, class: 'order-btn' do %>
+      <span class='order-btn-text'>出品する</span>
+      <%= image_tag "watermark.jpg", class: "order-btn-icon" %>
+    <% end %>
+  <% end %>
+  <aside class="sidebar-container">
+  </aside>
+  
+</div>
+

@@ -1,0 +1,119 @@
+.header {
+  background: #D8D8D8;
+  height: 80px;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-wrap{
+  height: auto;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.main{
+  background: #F6F5F4;
+  height: 100%;
+  width: 680px;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.article-card{
+  width: 310px;
+  height: 208px;
+  background: #fff;
+  float: left;
+  margin-bottom: 20px;
+}
+.article-card:nth-child(odd){
+  margin-right: 20px;
+}
+.article-head{
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+}
+.article-img{
+  width: 100%;
+  height: 100%;
+}
+.article-foot{
+  padding: 5px;
+}
+.article-title{
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+  font-size: 15px;
+  color: #1A1A1A;
+  text-align: right;
+  font-weight: bold;
+}
+.sidebar-container{
+  background: #d7d2d2;
+  height: 100%;
+  width: 300px;
+  float: left;
+}
+
+.order-btn {
+  width: 120px;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.order-title {
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+}
+
+.order-btn-icon {
+  width: 60%;
+}
+
+.item-box {
+  padding: 10px;
+}
+
+
+.item-box-img {
+  width: 30%;
+  
+}
+
+.name,
+.item-price,
+.or-text,
+.change-item-btn,
+.items-sell-main {
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+  padding: 10px;
+}
+
+
+.item-btn {
+  display: block;
+	position: relative;
+	width: 100px;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #795548;
+}
+
+.item-btn:hover {
+	 opacity:0.8;
+	 cursor: pointer;
+	 text-decoration: none;
+}
+
+.links {
+  display: flex;
+  width: 50vw;
+}
+
+

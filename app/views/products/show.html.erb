@@ -1,0 +1,31 @@
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @shopping.product_name %>
+    </h2>
+    <div class='item-img-content'>
+      <%= image_tag @shopping.image, class:"item-box-img" %>
+    </div>
+    <div class="item-price-box">
+      <span class="item-price">
+        <%= "#{@shopping.price}円" %>
+      </span>
+    </div>
+    <% if owner_signed_in? %>
+      <%= link_to '商品の編集', edit_shopping_path, method: :get, class: "item-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to '削除', shopping_path(@shopping), method: :delete, class: "item-btn" %>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to '購入画面に進む', root_path, method: :get, class:"item-btn" %>
+    <% end %>
+  </div>
+  <div class="links">
+    <a href="#" class="change-item-btn">
+      ＜ 前の商品
+    </a>
+    <a href="#" class="change-item-btn">
+      後ろの商品 ＞
+    </a>
+  </div>
+</div>
