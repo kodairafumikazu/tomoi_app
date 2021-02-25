@@ -1,20 +1,20 @@
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%= @shopping.product_name %>
+      <%= @product.product_name %>
     </h2>
     <div class='item-img-content'>
-      <%= image_tag @shopping.image, class:"item-box-img" %>
+      <%= image_tag @product.image, class:"item-box-img" %>
     </div>
     <div class="item-price-box">
       <span class="item-price">
-        <%= "#{@shopping.price}円" %>
+        <%= "#{@product.price}円" %>
       </span>
     </div>
     <% if owner_signed_in? %>
-      <%= link_to '商品の編集', edit_shopping_path, method: :get, class: "item-btn" %>
+      <%= link_to '商品の編集', edit_product_path, method: :get, class: "item-btn" %>
       <p class='or-text'>or</p>
-      <%= link_to '削除', shopping_path(@shopping), method: :delete, class: "item-btn" %>
+      <%= link_to '削除', product_path(@product), method: :delete, class: "item-btn" %>
     <% end %>
     <% if user_signed_in? %>
       <%= link_to '購入画面に進む', root_path, method: :get, class:"item-btn" %>

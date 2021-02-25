@@ -1,9 +1,9 @@
 <div class="items-sell-contents">
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を修正</h2>
-    <%= form_with model: @shopping, local: true do |f| %>
+    <%= form_with model: @product, local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
-    <%= image_tag @shopping.image, class:"item-box-img" %>
+    <%= image_tag @product.image, class:"item-box-img" %>
     <%# 出品画像 %>
     <div class="img-upload">
       <div class="click-upload">

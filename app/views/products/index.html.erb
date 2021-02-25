@@ -1,21 +1,21 @@
 <div class="main-wrap">
   <main class="main">
     <%# 商品一覧 %>
-    <% @shoppings.each do |shopping| %>
+    <% @products.each do |product| %>
       <article class="article-card">
-        <%= link_to shopping.product_name, shopping_path(shopping), class: "article-link" %>
+        <%= link_to product.product_name, product_path(product), class: "article-link" %>
         <div class='article-head'>  
-          <%= image_tag shopping.image, class: "article-img" %>
+          <%= image_tag product.image, class: "article-img" %>
         </div>  
         <div class="article-foot">
           <div class="article-title">
-            <span><%= "#{shopping.price}円" %></span>
+            <span><%= "#{product.price}円" %></span>
           </div>
         </div>
       </article>
     <% end %>
 
-    <% unless @shoppings.present? %>
+    <% unless @products.present? %>
       <article class="article-card">
         <a href="" class="article-link"><div>ダミー商品</div>
           <div class="article-head">
@@ -39,7 +39,7 @@
       <%= image_tag "210746.jpg", class: "order-btn-icon" %>
     <% end %>
   <% else owner_signed_in? %>
-    <%= link_to new_shopping_path, class: 'order-btn' do %>
+    <%= link_to new_product_path, class: 'order-btn' do %>
       <span class='order-btn-text'>出品する</span>
       <%= image_tag "watermark.jpg", class: "order-btn-icon" %>
     <% end %>

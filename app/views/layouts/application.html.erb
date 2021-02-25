@@ -13,14 +13,14 @@
     <header>
       <div class="heading">
         <h1 class="title">
-        <%= link_to "トモリ珈琲 online shop", items_path %>
+        <%= link_to "トモリ珈琲 online shop", shops_path %>
       </div>
       <div class="navbar">
         <ul class="nav-lists">
-          <%= link_to "店舗ガイド", store_guides_path, class: :nav__lists %>
-          <%= link_to "ショッピング", shoppings_path, class: :nav__lists %>
+          <%= link_to "店舗ガイド", shops_path, class: :nav__lists %>
+          <%= link_to "ショッピング", products_path, class: :nav__lists %>
           <%= link_to "アクセス", accesses_path, class: :nav__lists %>
-          <%= link_to "フランチャイズ募集", item_path(:id), class: :nav__lists %>
+          <%= link_to "フランチャイズ募集", shop_path(:id), class: :nav__lists %>
           <% if user_signed_in? %>
             <div class="nav-lists2">
             <%# ユーザー %>

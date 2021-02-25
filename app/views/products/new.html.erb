@@ -2,7 +2,7 @@
   <header class="items-sell-header">
   </header>
   <div class="items-sell-main">
-    <%= form_with model: @shopping, url: shoppings_path, local: true do |f| %>
+    <%= form_with model: @product, url: products_path, local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
     <div class="img-upload">
       <div class="click-upload">

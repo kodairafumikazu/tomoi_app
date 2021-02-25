@@ -1,19 +1,19 @@
 class ProductsController < ApplicationController
   #before_action :move_to_index, except: :index
-  before_action :set_shopping, only: [:edit, :update, :destroy, :show]
+  before_action :set_product, only: [:edit, :update, :destroy, :show]
 
 
   def index
-    @shoppings = Shopping.all
+    @products = Product.all
   end
 
   def new
-    @shopping = Shopping.new
+    @product = Product.new
   end
 
   def create
-    @shopping = Shopping.new(shopping_params)
-    if @shopping.save
+    @product = Product.new(product_params)
+    if @product.save
       redirect_to root_path
     else
       render :new
@@ -27,8 +27,8 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @shopping.update(shopping_params)
-    if @shopping.save
+    @product.update(product_params)
+    if @product.save
       redirect_to root_path
     else
       render :edit
@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    if @shopping.destroy
+    if @product.destroy
       redirect_to root_path
     else
       render :show
@@ -46,12 +46,12 @@ class ProductsController < ApplicationController
 
   private
 
-  def shopping_params
-    params.require(:shopping).permit(:image, :product_name, :price)#.merge(owner_id: current_owner.id)
+  def product_params
+    params.require(:product).permit(:image, :product_name, :price)#.merge(owner_id: current_owner.id)
   end
 
-  def set_shopping
-    @shopping = Shopping.find(params[:id])
+  def set_product
+    @product = Product.find(params[:id])
   end
 
   #  def move_to_index
