@@ -13,11 +13,11 @@
     <header>
       <div class="heading">
         <h1 class="title">
-        <%= link_to "トモリ珈琲 online shop", shops_path %>
+        <%= link_to "トモイ珈琲 online shop", shops_path %>
       </div>
       <div class="navbar">
         <ul class="nav-lists">
-          <%= link_to "店舗ガイド", shops_path, class: :nav__lists %>
+          <%= link_to "店舗ガイド", shop_guides_path, class: :nav__lists %>
           <%= link_to "ショッピング", products_path, class: :nav__lists %>
           <%= link_to "アクセス", accesses_path, class: :nav__lists %>
           <%= link_to "フランチャイズ募集", shop_path(:id), class: :nav__lists %>
@@ -43,7 +43,7 @@
     </header>
     <%= yield %>
     <footer>
-      <p>Copyright(C) トモリ 珈琲 ALL RIGHTS RESERVED.</p>
+      <p>Copyright(C) トモイ 珈琲 ALL RIGHTS RESERVED.</p>
     </footer>
   </body>
 </html>
