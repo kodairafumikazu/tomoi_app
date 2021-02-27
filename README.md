@@ -38,7 +38,7 @@
 | name               | string  | null: false               |
 | email              | string  | null: false, unique: true |
 | encrypted_password | string  | null: false               |
-| roll_id            | integer | null: false               |
+| role               | integer | null: false, default: 0   |
 
 ### Association
 
@@ -54,7 +54,7 @@
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
 | product_name           | string     | null: false                    |
-| price                  | integer    | null: false                    |
+| price                  | integer    | null: false, default: 0        |
 | info                   | text       | null: false                    |
 
 ### Association
@@ -66,8 +66,8 @@
 
 | Column                      | Type       | Options                        |
 | --------------------------  | ---------- | ------------------------------ |
-| scheduled_delivery_date_id  | integer    | null: false                    |
-| scheduled_delivery_time_id  | integer    | null: false                    |
+| scheduled_delivery_date_id  | integer    | null: false, default: 0        |
+| scheduled_delivery_time_id  | integer    | null: false, default: 0        |
 | user                        | references | null: false, foreign_key: true |
 
 
@@ -83,7 +83,7 @@
 
 | Column                      | Type       | Options                        |
 | --------------------------  | ---------- | ------------------------------ |
-| quantity                    | integer    | null: false                    |
+| quantity                    | integer    | null: false, default: 0        |
 | order                       | references | null: false, foreign_key: true |
 | product                     | references | null: false, foreign_key: true |
 
@@ -100,7 +100,7 @@
 | Column                      | Type       | Options                        |
 | -----------------           | ---------- | ------------------------------ |
 | postal_code                 | string     | null: false                    |
-| prefecture_id               | integer    | null: false                    |
+| prefecture_id               | integer    | null: false, default: 0        |
 | city                        | string     | null: false                    |
 | town                        | string     | null: false                    |
 | building                    | string     |
