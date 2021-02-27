@@ -25,11 +25,11 @@
             <div class="nav-lists2">
             <%# ユーザー %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__lists %>
-          <% elsif owner_signed_in? %>
+          <%# elsif user_signed_in? && user.role == 'admin' %>
             <%# 管理者 %>
-            <%= link_to "ログアウト", destroy_owner_session_path, method: :delete, class: :nav__lists %>
-            </div>
-          <% else %>
+            <%# link_to "ログアウト", destroy_owner_session_path, method: :delete, class: :nav__lists %>
+            <%#/div>
+          <%# else %>
             <div class="nav-lists2">
             <%# ゲストユーザー %>
             <%= link_to "ログイン", new_user_session_path, class: :nav__lists %>

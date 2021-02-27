@@ -62,6 +62,22 @@
 - has_many    :order_items
 
 
+## orders テーブル
+
+| Column                      | Type       | Options                        |
+| --------------------------  | ---------- | ------------------------------ |
+| scheduled_delivery_date_id  | integer    | null: false                    |
+| scheduled_delivery_time_id  | integer    | null: false                    |
+| user                        | references | null: false, foreign_key: true |
+
+
+### Association
+
+- belongs to  :user
+- belongs to  :address
+- has_many    :order_items
+
+
 
 ## order_items テーブル
 
@@ -76,41 +92,27 @@
 
 
 
-## orders テーブル
+
+
+
+## addresses テーブル
 
 | Column                      | Type       | Options                        |
-| --------------------------  | ---------- | ------------------------------ |
-| scheduled_delivery_date_id  | integer    | null: false                    |
-| scheduled_delivery_time_id  | integer    | null: false                    |
+| -----------------           | ---------- | ------------------------------ |
+| postal_code                 | string     | null: false                    |
+| prefecture_id               | integer    | null: false                    |
+| city                        | string     | null: false                    |
+| town                        | string     | null: false                    |
+| building                    | string     |
+| phone_number                | string     | null: false                    |
 | user                        | references | null: false, foreign_key: true |
 
 
 ### Association
 
 - belongs to :user
-- has_one    :address
-- has_many   :order_items
+- has_many   :orders
 
-
-
-
-
-## addresses テーブル
-
-| Column            | Type       | Options                        |
-| ----------------- | ---------- | ------------------------------ |
-| postal_code       | string     | null: false                    |
-| prefecture_id     | integer    | null: false                    |
-| city              | string     | null: false                    |
-| town              | string     | null: false                    |
-| building          | string     |
-| phone_number      | string     | null: false                    |
-
-
-### Association
-
-- belongs to :order
-- belongs to :user
 
 
 

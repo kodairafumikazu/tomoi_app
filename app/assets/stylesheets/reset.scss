@@ -1,0 +1,30 @@
+/* リセットCSS */
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 60px;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+ }

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 
   resources :shops, only: [:index, :show]
-  resources :store_guides, only: :index
+  resources :shop_guides, only: :index
   resources :accesses, only: :index
 
   root to: "products#index"
