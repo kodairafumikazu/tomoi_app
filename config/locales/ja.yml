@@ -3,4 +3,4 @@ ja:
     user:           #モデル名を指定
       role:           #カラム名を指定
         general: 一般
-          admin: オーナー
+        admin: オーナー
