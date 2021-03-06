@@ -7,6 +7,7 @@ class Product < ApplicationRecord
   with_options presence: true do
     validates :product_name
     validates :price
+    validates :info
     validates :image
   end
 end

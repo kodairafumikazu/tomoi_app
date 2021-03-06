@@ -14,4 +14,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々]+\z/, message: '全角（漢字、ひらがな、カタカナ）文字を使用してください' } do
   end
+  # with_options presence: true do
+  #   validates :role
+  # end
 end
