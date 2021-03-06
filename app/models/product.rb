@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   
-  has_one :order
+  has_many :order_items
   has_one_attached :image
   # extend ActiveHash::Associations::ActiveRecordExtensions
 
