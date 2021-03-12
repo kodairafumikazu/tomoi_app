@@ -47,7 +47,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:image, :product_name, :price, :info)#.merge(owner_id: current_owner.id)
+    params.require(:product).permit(:image, :product_name, :price, :info)
   end
 
   def set_product
@@ -55,6 +55,6 @@ class ProductsController < ApplicationController
   end
 
   #  def move_to_index
-  #    redirect_to action: :index unless user_signed_in? || owner_signed_in?
+  #    redirect_to action: :index unless user_signed_in? 
   #  end
 end
