@@ -11,12 +11,12 @@
         <%= "#{@product.price}円" %>
       </span>
     </div>
-    <%# if current_user.role == 'admin' %>
+    <% if current_user.role == 'admin' %>
       <%= link_to '商品の編集', edit_product_path, method: :get, class: "item-btn" %>
       <p class='or-text'>or</p>
       <%= link_to '削除', product_path(@product), method: :delete, class: "item-btn" %>
     <%# end %>
-    <% if user_signed_in? %>
+    <% else user_signed_in? %>
       <%= link_to '購入画面に進む', root_path, method: :get, class:"item-btn" %>
     <% end %>
   </div>
