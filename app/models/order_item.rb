@@ -1,6 +1,6 @@
 class OrderItem < ApplicationRecord
-  belongs to :order
-  belongs to :product
+  belongs_to :order
+  belongs_to :product
   has_one_attached :image
 
   with_options presence: true do
