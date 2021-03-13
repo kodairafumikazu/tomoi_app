@@ -6,7 +6,7 @@ FactoryBot.define do
     town           { '青山1-1-1' }
     building       { 'ハイツ-101' }
     phone_number   { '09012345678' }
-    #token          { 'token090' }
+    # token          { 'token090' }
     association :user
   end
 end

@@ -70,7 +70,6 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('Password には6文字以上の半角英字と半角数字の両方を含めて設定してください')
       end
-
     end
   end
 end

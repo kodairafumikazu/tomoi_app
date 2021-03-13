@@ -10,6 +10,6 @@ class Addresse < ApplicationRecord
     validates :town
     validates :phone_number, format: { with: /\A[0-9]{11}\z/ }
     validates :user_id
-    #validates :token
+    # validates :token
   end
 end

@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
-  #before_action :move_to_index, except: :index
+  # before_action :move_to_index, except: :index
   before_action :set_product, only: [:edit, :update, :destroy, :show]
-
 
   def index
     @products = Product.all
@@ -43,7 +42,6 @@ class ProductsController < ApplicationController
     end
   end
 
-
   private
 
   def product_params
@@ -55,6 +53,6 @@ class ProductsController < ApplicationController
   end
 
   #  def move_to_index
-  #    redirect_to action: :index unless user_signed_in? 
+  #    redirect_to action: :index unless user_signed_in?
   #  end
 end
