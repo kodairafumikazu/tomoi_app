@@ -19,5 +19,6 @@ class User < ApplicationRecord
   #   validates :role
   # end
   def self.from_omniauth(auth)
+    sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
   end
 end
