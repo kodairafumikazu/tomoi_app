@@ -44,7 +44,21 @@
 
 - has_many   :orders
 - has_many   :addresses
+- has_many   :sns_credentials
 
+
+
+## sns_credentials テーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| provider           | string     |
+| uid                | string     |
+| user               | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
 
 
 
@@ -82,7 +96,7 @@
 ## order_items テーブル
 
 | Column                      | Type       | Options                        |
-| --------------------------  | ---------- | ------------------------------ |
+| --------------------------- | ---------- | ------------------------------ |
 | quantity                    | integer    | null: false, default: 0        |
 | order                       | references | null: false, foreign_key: true |
 | product                     | references | null: false, foreign_key: true |
@@ -98,7 +112,7 @@
 ## addresses テーブル
 
 | Column                      | Type       | Options                        |
-| -----------------           | ---------- | ------------------------------ |
+| --------------------------- | ---------- | ------------------------------ |
 | postal_code                 | string     | null: false                    |
 | prefecture_id               | integer    | null: false, default: 0        |
 | city                        | string     | null: false                    |
