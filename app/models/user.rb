@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :orders
   has_many :addresses
+  has_many :sns_credentials
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には6文字以上の半角英字と半角数字の両方を含めて設定してください'
