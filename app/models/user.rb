@@ -18,4 +18,6 @@ class User < ApplicationRecord
   # with_options presence: true do
   #   validates :role
   # end
+  def self.from_omniauth(auth)
+  end
 end
