@@ -23,6 +23,11 @@
               <%= f.password_field :password, autocomplete: "off"%>
             </div>
           </div>
+
+          <%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, method: :post %>
+          <P></p>
+          <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post%>
+
           <div class='actions'>
             <%= f.submit "Log in", class: 'btn'%>
           </div>
