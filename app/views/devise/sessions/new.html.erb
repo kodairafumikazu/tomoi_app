@@ -24,9 +24,15 @@
             </div>
           </div>
 
-          <%= link_to "Facebookでログイン", user_facebook_omniauth_authorize_path, method: :post%>
+          <%= link_to user_facebook_omniauth_authorize_path, method: :post, class: 'btn' do%>
+            <img class="img" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.2365-6/17639236_1785253958471956_282550797298827264_n.png?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=ad8a9d&amp;_nc_ohc=oGgyl1CgWTwAX-kcro8&amp;_nc_ht=scontent-sjc3-1.xx&amp;oh=53b9f19e3143abd18f660eaeb7140a7e&amp;oe=607E2D16" width="200" alt="">
+          <% end %>
+          <%# link_to "Facebookでログイン", user_facebook_omniauth_authorize_path, method: :post%>
           <P></p>
-          <%= link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, method: :post%>
+          <%# link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, method: :post%>
+          <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: 'btn' do%>
+            <%= image_tag 'btn_google_signin_light_pressed_web.png' %>
+          <% end %>
 
           <div class='actions'>
             <%= f.submit "Log in", class: 'btn'%>
