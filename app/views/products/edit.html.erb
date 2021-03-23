@@ -7,7 +7,7 @@
     <%# 出品画像 %>
     <div class="img-upload">
       <div class="click-upload">
-        <%= f.file_field :image %>
+        <%= f.file_field :image, accept: "image/png, image/jpeg, image/gif, image/jpg" %>
       </div>
     </div>
     <%# /出品画像 %>

@@ -9,7 +9,7 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image %>
+        <%= f.file_field :image, accept: "image/png, image/jpeg, image/gif, image/jpg" %>
       </div>
     </div>
     <div class="new-items">
