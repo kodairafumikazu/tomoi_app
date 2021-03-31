@@ -11,8 +11,8 @@ module ApplicationHelper
       canonical: request.original_url,
       noindex: ! Rails.env.production?,
       icon: [
-        { href: image_url('/images/251280.jpg') },
-        { href: image_url('/images/552306.jpg'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+        { href: image_url('https://tomoi-app.herokuapp.com/images/251280.jpg') },
+        { href: image_url('https://tomoi-app.herokuapp.com/images/552306.jpg'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
       ],
       og: {
         site_name: :site,
@@ -20,13 +20,14 @@ module ApplicationHelper
         description: :description, 
         type: 'website',
         url: request.original_url,
-        image: image_url('/images/405990_s.jpg'),
+        image: image_url('https://tomoi-app.herokuapp.com/images/405990_s.jpg'),
         locale: 'ja_JP',
       },
       twitter: {
-        card: 'summary',
+        card: 'summary_large_image',
         site: '@Fumi_Kazu5',
-        # image: image_url('https://tomoi-app.herokuapp.com/images/44024299.jpg'),
+        player: '@Fumi_Kazu5',
+        image: image_url('https://tomoi-app.herokuapp.com/images/44024299.jpg'),
         # width: 100,
         # height: 100
       },
