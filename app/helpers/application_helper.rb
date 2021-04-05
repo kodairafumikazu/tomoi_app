@@ -20,14 +20,14 @@ module ApplicationHelper
         description: :description, 
         type: 'website',
         url: request.original_url,
-        image: image_url('https://tomoi-app.herokuapp.com/images/405990_s.jpg'),
+        image: image_url('/images/405990_s.jpg'),
         locale: 'ja_JP',
       },
       twitter: {
         card: 'summary_large_image',
         site: '@Fumi_Kazu5',
-        player: '@Fumi_Kazu5',
-        image: image_url('https://tomoi-app.herokuapp.com/images/44024299.jpg'),
+        #player: '@Fumi_Kazu5',
+        image: image_url('/images/44024299.jpg'),
         # width: 100,
         # height: 100
       },
