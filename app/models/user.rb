@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   enum role: { general: 0, admin: 1 }
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :twitter, :google_oauth2]
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
   has_one_attached :image
   has_many :orders
@@ -34,23 +34,4 @@ class User < ApplicationRecord
     { user: user, sns: sns }
   end
 
-  # Twitter認証ログイン用
-  # ユーザーの情報があれば探し、無ければ作成する
-  def self.find_for_oauth(auth)
-    user = User.find_by(uid: auth.uid, provider: auth.provider)
-
-    user ||= User.create!(
-      uid: auth.uid,
-      provider: auth.provider,
-      name: auth[:info][:name],
-      email: User.dummy_email(auth),
-      password: Devise.friendly_token[0, 20]
-    )
-
-    user
-  end
-
-  def self.dummy_email(auth)
-    "#{Time.now.strftime('%Y%m%d%H%M%S').to_i}-#{auth.uid}-#{auth.provider}@example.com"
-  end
 end

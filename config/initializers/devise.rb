@@ -310,6 +310,4 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
   config.omniauth :facebook,ENV['FACEBOOK_CLIENT_ID'],ENV['FACEBOOK_CLIENT_SECRET']
   config.omniauth :google_oauth2,ENV['GOOGLE_CLIENT_ID'],ENV['GOOGLE_CLIENT_SECRET']
-  config.omniauth :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET'], scope: 'email', oauth_callback: "#{ENV['DOMAIN_NAME']}/users/auth/twitter/callback"
-  OmniAuth.config.logger = Rails.logger if Rails.env.development? # debug用
 end
