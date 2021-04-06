@@ -26,10 +26,6 @@ module ApplicationHelper
       twitter: {
         card: 'summary_large_image',
         site: '@Fumi_Kazu5',
-        #player: '@Fumi_Kazu5',
-        #image: image_url('44024299.jpg'),
-        # width: 100,
-        # height: 100
       },
       fb: {
         app_id: '435683437534143'
