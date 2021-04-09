@@ -86,3 +86,4 @@ gem 'omniauth', '~>1.9.1'
 gem 'omniauth-twitter'
 
 gem 'meta-tags'
+gem 'dotenv-rails'
