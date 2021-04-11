@@ -17,6 +17,7 @@
 
     <% unless @products.present? %>
       <article class="article-card">
+        
         <a href="" class="article-link"><div>カフェモカ</div>
           <div class="article-head">
             <%= image_tag "4404299.jpg", class: "article-img" %>
@@ -31,6 +32,7 @@
     <% end %>
     <% unless @products.present? %>
       <article class="article-card">
+        <%= link_to product.product_name, product_path(product), class: "article-link" %>                          
         <a href="" class="article-link"><div>パンケーキ</div>
           <div class="article-head">
             <%= image_tag "230311_s.jpg", class: "article-img" %>
